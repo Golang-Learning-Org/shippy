@@ -6,7 +6,7 @@ import (
 
 	"github.com/micro/go-micro/v2"
 
-	pb "github.com/evanxzj/shippy/shippy-service-consignment/proto/consignment"
+	pb "github.com/Golang-Learning-Org/shippy/shippy-service-consignment/proto/consignment"
 )
 
 type repository interface {

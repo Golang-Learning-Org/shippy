@@ -10,7 +10,6 @@ import (
 	"github.com/micro/go-micro/v2"
 
 	pb "github.com/Golang-Learning-Org/shippy/shippy-service-consignment/proto/consignment"
-	vesselProto "github.com/Golang-Learning-Org/shippy/shippy-service-vessel/proto/vessel"
 )
 
 const (
@@ -33,9 +32,7 @@ func main() {
 	service.Init()
 
 	client := pb.NewShippingService("shippy.service.consignment", service.Client())
-	vesselClient := vesselProto.NewShippingService("shippy.service.vessel", service.Client())
-	// spec := vesselProto.
-	vessel := vesselClient.FindAvailable()
+	// client2 := pb.NewShippingService("shippy.service.vessel", service.Client())
 
 	// Contact the server and print out its response.
 	file := defaultFilename

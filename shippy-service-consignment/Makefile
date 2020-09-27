@@ -1,7 +1,7 @@
 generateProto:
-	protoc -I. --go_out=plugins=grpc:. proto/consignment/consignment.proto
+	protoc --proto_path=. --go_out=. --micro_out=. proto/consignment/consignment.proto
 
-run: 
+run:
 	go run main.go
 
 PHONY: generateProto
